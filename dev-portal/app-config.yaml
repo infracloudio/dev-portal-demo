@@ -46,8 +46,22 @@ techdocs:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
 auth:
+  environment: development
   # see https://backstage.io/docs/tutorials/quickstart-app-auth to know more about enabling auth providers
-  providers: {}
+  providers:
+    google:
+      development:
+        clientId: ${AUTH_GOOGLE_CLIENT_ID}
+        clientSecret: ${AUTH_GOOGLE_CLIENT_SECRET}
+
+kubernetes:
+  serviceLocatorMethod:
+    type: 'multiTenant'
+  clusterLocatorMethods:
+    - type: 'gke'
+      projectId: ${GOOGLE_PROJECT_ID}
+      region: ${GKE_REGION}
+      skipTLSVerify: true
 
 scaffolder:
   github:
