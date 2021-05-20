@@ -44,6 +44,10 @@ import {
   EntityMembersListCard,
   EntityOwnershipCard,
 } from '@backstage/plugin-org';
+import {
+  EntityCircleCIContent,
+  isCircleCIAvailable,
+} from '@backstage/plugin-circleci';
 import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 
@@ -53,6 +57,10 @@ const cicdContent = (
   <EntitySwitch>
     <EntitySwitch.Case if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
+    </EntitySwitch.Case>
+
+    <EntitySwitch.Case if={isCircleCIAvailable}>
+      <EntityCircleCIContent />
     </EntitySwitch.Case>
 
     <EntitySwitch.Case>
