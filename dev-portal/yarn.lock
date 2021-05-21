@@ -1234,7 +1234,7 @@
     "@backstage/errors" "^0.1.1"
     cross-fetch "^3.0.6"
 
-"@backstage/catalog-model@^0.7.6", "@backstage/catalog-model@^0.7.8", "@backstage/catalog-model@^0.7.9":
+"@backstage/catalog-model@^0.7.6", "@backstage/catalog-model@^0.7.7", "@backstage/catalog-model@^0.7.8", "@backstage/catalog-model@^0.7.9":
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/@backstage/catalog-model/-/catalog-model-0.7.9.tgz#4fa65d70845d5f96f4b909724a1b4b7d5f4b40d7"
   integrity sha512-8NTkh17Nm5IHfJt6hk63UmgVmLTnrAp9CZmNKnNYTvTmIGM7AFGvVcHVIKbiVxM18/fayOa6kZOSVMgxyykkpw==
@@ -1386,7 +1386,7 @@
     react-use "^17.2.4"
     zen-observable "^0.8.15"
 
-"@backstage/core@^0.7.9":
+"@backstage/core@^0.7.6", "@backstage/core@^0.7.9":
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/@backstage/core/-/core-0.7.9.tgz#cbfd42b0243eb303d1e08541281b7af228d2dd40"
   integrity sha512-fo5dnEIU6HxWdJX5tQnH6q79UUw90uqxQHUntm3+OkWYqnVettMe858hfT0vYBAL17Oe+6tF9MnTWDAfdzimPw==
@@ -1616,7 +1616,7 @@
     react-use "^17.2.4"
     yaml "^1.10.0"
 
-"@backstage/plugin-catalog-react@^0.1.6":
+"@backstage/plugin-catalog-react@^0.1.4", "@backstage/plugin-catalog-react@^0.1.6":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-react/-/plugin-catalog-react-0.1.6.tgz#1d72756cce22b880987c30ac27e23af8efa22843"
   integrity sha512-/60GIrcFfyAiKn3bylXegwtHf1NQxQa4PcXD7nSIB5ISCuot2mkI32LMjciEvNHR7efGA5Yv6yWelFSFdvbcKQ==
@@ -3253,7 +3253,7 @@
   resolved "https://registry.yarnpkg.com/@material-icons/font/-/font-1.0.9.tgz#ff962caa5139102685b85c317d000c439d58cb23"
   integrity sha512-/zWw5OwcnTwbFlC1I18Y/jeogzxDlZ+Mer7oHW4tqLQUfd6PpEeDL96wjmQXzIzBnTQKKJ0yWKtHa4kxipMDkA==
 
-"@material-ui/core@^4.11.0":
+"@material-ui/core@^4.11.0", "@material-ui/core@^4.11.3":
   version "4.11.4"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.11.4.tgz#4fb9fe5dec5dcf780b687e3a40cff78b2b9640a4"
   integrity sha512-oqb+lJ2Dl9HXI9orc6/aN8ZIAMkeThufA5iZELf2LQeBn2NtjVilF5D2w7e9RpntAzDb4jK5DsVhkfOvFY/8fg==
@@ -3271,7 +3271,7 @@
     react-is "^16.8.0 || ^17.0.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/icons@^4.9.1":
+"@material-ui/icons@^4.11.2", "@material-ui/icons@^4.9.1":
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.11.2.tgz#b3a7353266519cd743b6461ae9fdfcb1b25eb4c5"
   integrity sha512-fQNsKX2TxBmqIGJCSi3tGTO/gZ+eJgWmMJkgDiOfyNaunNaxcklJQFaFogYcFl0qFuaEz1qaXYXboa/bUXVSOQ==
@@ -3288,6 +3288,17 @@
     clsx "^1.0.4"
     prop-types "^15.7.2"
     react-is "^16.8.0"
+
+"@material-ui/lab@4.0.0-alpha.57":
+  version "4.0.0-alpha.57"
+  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.57.tgz#e8961bcf6449e8a8dabe84f2700daacfcafbf83a"
+  integrity sha512-qo/IuIQOmEKtzmRD2E4Aa6DB4A87kmY6h0uYhjUmrrgmEAgbbw9etXpWPVXuRK6AGIQCjFzV6WO2i21m1R4FCw==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@material-ui/utils" "^4.11.2"
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+    react-is "^16.8.0 || ^17.0.0"
 
 "@material-ui/pickers@3.2.2":
   version "3.2.2"
@@ -3724,6 +3735,27 @@
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/@rjsf/material-ui/-/material-ui-2.5.1.tgz#b93ac9f1f4a909e2aae729616859c2d72557e53e"
   integrity sha512-ooKxQJO12+i1xCGtknMZDxWSbVlSEgQ5U1I7lJ+uI/MvwAg3Rz9wb2cTEF3ErBczT7EEW+j1lR19rxBjFd78MA==
+
+"@roadiehq/backstage-plugin-datadog@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@roadiehq/backstage-plugin-datadog/-/backstage-plugin-datadog-1.1.4.tgz#7b738dec4a80eb05c71dfd77ea2dbbe987fa3cc1"
+  integrity sha512-gAfAL20bJadvLpQl3C2xW0fFqYc1xZx1D0bY3e0m7qRLknEShlgWR9bYqlPiYYN2gY6EikdieAYjNi+TVpIZdQ==
+  dependencies:
+    "@backstage/catalog-model" "^0.7.7"
+    "@backstage/core" "^0.7.6"
+    "@backstage/plugin-catalog-react" "^0.1.4"
+    "@material-ui/core" "^4.11.3"
+    "@material-ui/icons" "^4.11.2"
+    "@material-ui/lab" "4.0.0-alpha.57"
+    cross-fetch "^3.0.6"
+    history "^5.0.0"
+    moment "^2.27.0"
+    re-resizable "^6.9.0"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+    react-router "6.0.0-beta.0"
+    react-router-dom "6.0.0-beta.0"
+    react-use "^15.3.3"
 
 "@rollup/plugin-commonjs@^17.1.0":
   version "17.1.0"
@@ -9174,6 +9206,11 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
+fast-memoize@^2.5.1:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/fast-memoize/-/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
+  integrity sha512-Ue0LwpDYErFbmNnZSF0UH6eImUwDmogUO1jyE+JbN2gsQz/jICm1Ve7t9QT0rNSsfJt+Hs4/S3GnsDVjL4HVrw==
+
 fast-safe-stringify@^2.0.4:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
@@ -10175,7 +10212,7 @@ graphlib@^2.1.8:
   dependencies:
     lodash "^4.17.15"
 
-graphql-language-service-interface@^2.8.2:
+graphql-language-service-interface@2.8.2, graphql-language-service-interface@^2.8.2:
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/graphql-language-service-interface/-/graphql-language-service-interface-2.8.2.tgz#b3bb2aef7eaf0dff0b4ea419fa412c5f66fa268b"
   integrity sha512-otbOQmhgkAJU1QJgQkMztNku6SbJLu/uodoFOYOOtJsizTjrMs93vkYaHCcYnLA3oi1Goj27XcHjMnRCYQOZXQ==
@@ -10185,7 +10222,7 @@ graphql-language-service-interface@^2.8.2:
     graphql-language-service-utils "^2.5.1"
     vscode-languageserver-types "^3.15.1"
 
-graphql-language-service-parser@^1.9.0:
+graphql-language-service-parser@1.9.0, graphql-language-service-parser@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/graphql-language-service-parser/-/graphql-language-service-parser-1.9.0.tgz#79af21294119a0a7e81b6b994a1af36833bab724"
   integrity sha512-B5xPZLbBmIp0kHvpY1Z35I5DtPoDK9wGxQVRDIzcBaiIvAmlTrDvjo3bu7vKREdjFbYKvWNgrEWENuprMbF17Q==
@@ -16324,6 +16361,13 @@ rc@^1.2.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+re-resizable@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/re-resizable/-/re-resizable-6.9.0.tgz#9c3059b389ced6ade602234cc5bb1e12d231cd47"
+  integrity sha512-3cUDG81ylyqI0Pdgle/RHwwRYq0ORZzsUaySOCO8IbEtNyaRtrIHYm/jMQ5pjcNiKCxR3vsSymIQZHwJq4gg2Q==
+  dependencies:
+    fast-memoize "^2.5.1"
 
 react-app-polyfill@^1.0.4:
   version "1.0.6"
