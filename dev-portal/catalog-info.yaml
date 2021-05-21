@@ -1,16 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: carts
-  description:  Carts service
-  annotations:
-    backstage.io/kubernetes-label-selector: 'name=carts'
-    github.com/project-slug: 'amanjuneja5/carts'
-    datadoghq.com/dashboard-url: 'https://app.datadoghq.com/screen/integration/30341/kubernetes-deployments-overview?from_ts=1621356836171&live=true&to_ts=1621360436171&tpl_var_kube_namespace=sock-shop&tpl_var_kube_deployment=carts'
-    circleci.com/project-slug: 'github/abhisheks-infracloud/carts'
-  tags:
-    - spring-boot
+  name: dev-portal
+  description: An example of a Backstage application.
+  # Example for optional annotations
+  # annotations:
+    # github.com/project-slug: backstage/backstage
+    # backstage.io/techdocs-ref: url:https://github.com/backstage/backstage
 spec:
-  type: service
-  lifecycle:  production
-  owner: Infracloud
+  type: website
+  owner: john@example.com
+  lifecycle: experimental
+
