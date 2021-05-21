@@ -44,6 +44,10 @@ import {
   EntityMembersListCard,
   EntityOwnershipCard,
 } from '@backstage/plugin-org';
+import {
+  EntityCircleCIContent,
+  isCircleCIAvailable,
+} from '@backstage/plugin-circleci';
 import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 
@@ -59,6 +63,10 @@ const cicdContent = (
   <EntitySwitch>
     <EntitySwitch.Case if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
+    </EntitySwitch.Case>
+
+    <EntitySwitch.Case if={isCircleCIAvailable}>
+      <EntityCircleCIContent />
     </EntitySwitch.Case>
 
     <EntitySwitch.Case>
@@ -79,6 +87,35 @@ const cicdContent = (
     </EntitySwitch.Case>
   </EntitySwitch>
 );
+
+const circleciContent = (
+  // This is an example of how you can implement your company's logic in entity page.
+  // You can for example enforce that all components of type 'service' should use CircleCI
+  <EntitySwitch>
+
+    <EntitySwitch.Case if={isCircleCIAvailable}>
+      <EntityCircleCIContent />
+    </EntitySwitch.Case>
+
+    <EntitySwitch.Case>
+      <EmptyState
+        title="No CI/CD available for this entity"
+        missing="info"
+        description="You need to add an annotation to your component if you want to enable CI/CD for it. You can read more about annotations in Backstage by clicking the button below."
+        action={
+          <Button
+            variant="contained"
+            color="primary"
+            href="https://backstage.io/docs/features/software-catalog/well-known-annotations"
+          >
+            Read more
+          </Button>
+        }
+      />
+    </EntitySwitch.Case>
+  </EntitySwitch>
+);
+
 
 const overviewContent = (
   <Grid container spacing={3} alignItems="stretch">
@@ -103,6 +140,10 @@ const serviceEntityPage = (
 
     <EntityLayout.Route path="/ci-cd" title="CI/CD">
       {cicdContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/circle-ci" title="CircleCI">
+      {circleciContent}
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/api" title="API">
