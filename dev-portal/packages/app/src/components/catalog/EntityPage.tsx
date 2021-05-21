@@ -47,6 +47,12 @@ import {
 import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 
+import {
+  EntityDatadogContent,
+  EntityDatadogGraphCard,
+  isDatadogGraphAvailable
+} from '@roadiehq/backstage-plugin-datadog';
+
 const cicdContent = (
   // This is an example of how you can implement your company's logic in entity page.
   // You can for example enforce that all components of type 'service' should use GitHubActions
@@ -79,6 +85,13 @@ const overviewContent = (
     <Grid item md={6}>
       <EntityAboutCard variant="gridItem" />
     </Grid>
+    <EntitySwitch>
+    <EntitySwitch.Case if={isDatadogGraphAvailable}>
+      <Grid item>
+        <EntityDatadogGraphCard/>
+      </Grid>
+    </EntitySwitch.Case>
+    </EntitySwitch>
   </Grid>
 );
 
@@ -109,6 +122,11 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/kubernetes" title="Kubernetes">
       <EntityKubernetesContent />
     </EntityLayout.Route>
+
+    <EntityLayout.Route path="/datadog" title="Datadog">
+      <EntityDatadogContent />
+    </EntityLayout.Route>
+
   </EntityLayout>
 );
 
